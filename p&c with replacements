@@ -1,0 +1,23 @@
+
+
+from itertools import combinations_with_replacement
+from itertools import combinations
+from itertools import permutations
+
+#combinations_with_replacement
+cr,n= input().split()
+print (*[''.join (i) for i in combinations_with_replacement(sorted(cr),int(n))],sep='\n')
+
+
+#combinations
+c,n= input().split()
+for j in range (1,int(n)+1):
+    for b in combinations (sorted(c),j):
+        print (''. join (b) )
+
+
+#permutations
+p,k= input().split()
+print (*[''.join(m) for m in permutations(sorted (p),int(k))],sep='\n')
+
+
